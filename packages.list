@@ -1,0 +1,17 @@
+# Core utilities
+curl
+wget
+
+# Version control
+git
+
+# Build tools
+build-essential
+
+# Specific libraries for the project
+libssl-dev
+libreadline-dev
+apt-transport-https
+ca-certificates
+gnupg
+google-cloud-cli

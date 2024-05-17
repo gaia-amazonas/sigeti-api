@@ -22,7 +22,7 @@ Con los repositorios nuevos añadidos, instalar los paquetes contenidos en ```pa
 
 ## Instale los paquetes Python
 
-Con ```pip insta```
+Con ```pip install -r requirements.txt```
 
 
 ## Inicialice Google CLI para crear conectar la API:  paso

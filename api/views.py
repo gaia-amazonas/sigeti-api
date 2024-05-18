@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from .big_query import query
+from big_query import query
 
 
 def traer_actores(request):

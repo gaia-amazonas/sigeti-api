@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # Local
     "cuentas.apps.CuentasConfig",
     "api.apps.ApiConfig",
+    "indicadores.apps.IndicadoresConfig",
 ]
 
 MIDDLEWARE = [

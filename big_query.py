@@ -1,5 +1,3 @@
-# api/bigquery_service.py
-
 from google.cloud import bigquery
 import os
 

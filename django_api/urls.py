@@ -22,4 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("api.urls")),
     path("indicadores/", include("indicadores.urls")),
+    path("territorios/", include("territorios.urls")),
+    path("comunidades/", include("comunidades.urls")),
 ]

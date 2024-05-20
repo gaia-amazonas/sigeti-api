@@ -1,9 +1,8 @@
-from django.http import JsonResponse
-from big_query import query
+from queries.big_query.query import query_normal as bigquery
 
 
 def traer_sexo_edad_territorial(request, pk):
-    sql_query = (
+    sql = (
         "SELECT sexo, edad\
                 FROM `sigeti-admin-364713.censo_632.BD_personas`\
                 WHERE territorio = (SELECT territorio\
@@ -17,6 +16,15 @@ def traer_sexo_edad_territorial(request, pk):
                 ORDER BY territorio DESC\
                 LIMIT 1);"
     )
-    results = query(sql_query)
-    data = [dict(row) for row in results]
-    return JsonResponse(data, safe=False)
+    return bigquery(sql)
+
+
+def traer_infraeastructura_comunal(request, pk):
+    sql = (
+        "SELECT INFR_TOTMALOCAS, INFR_MALESCOLAR, INFR_SALUDTOT\
+                 FROM `sigeti-admin-364713.censo_632.BD_comunidades`\
+                 WHERE ID = "
+        + str(pk)
+        + ";"
+    )
+    return bigquery(sql)
